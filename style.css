@@ -1,0 +1,156 @@
+/* VARIABLES */
+
+:root {
+  --clr-yellow: 47, 88%, 63%;
+  --clr-white: 0, 0%, 100%;
+  --clr-grey: 0, 0%, 50%;
+  --clr-black: 0, 0%, 7%;
+}
+
+/* RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* GENERAL */
+
+body {
+  font-family: "Figtree", sans-serif;
+  font-size: 1.6rem;
+  background-color: hsl(var(--clr-yellow));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  font-weight: 500;
+  color: hsl(var(--clr-black));
+  line-height: 1.5;
+  padding: 2.4rem;
+}
+
+/* UTILITY */
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* CARD */
+
+.card {
+  background-color: hsl(var(--clr-white));
+  padding: 2.4rem;
+  border-radius: 2rem;
+  width: 100%;
+  max-width: 384px;
+  border: 1px solid hsl(var(--clr-black));
+  box-shadow: 8px 8px 0 0 hsl(var(--clr-black));
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: 16px 16px 0 0 hsl(var(--clr-black));
+}
+
+.card:hover .card__title {
+  color: hsl(var(--clr-yellow));
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.card__badges {
+  display: flex;
+  gap: 1rem;
+}
+
+.card__badge {
+  background-color: hsl(var(--clr-yellow));
+  font-weight: 800;
+  font-size: 1.4rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.4rem;
+}
+
+.card__details {
+  font-size: 1.4rem;
+}
+
+.card__title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  transition: color 0.3s ease-in-out;
+}
+
+.card__text {
+  color: hsl(var(--clr-grey));
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.card__author {
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+/* ATTRIBUTION */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution__link {
+  color: hsl(var(--clr-black));
+}
+.attribution__link:hover {
+  text-decoration: none;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 425px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  .card__badge,
+  .card__details {
+    font-size: 1.2rem;
+  }
+
+  .card__title {
+    font-size: 2rem;
+  }
+}
