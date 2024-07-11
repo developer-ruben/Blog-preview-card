@@ -130,6 +130,13 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+
+  position: fixed;
+  bottom: 0;
+  padding: 1rem;
+  background-color: hsl(var(--clr-white));
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
 }
 .attribution__link {
   color: hsl(var(--clr-black));
@@ -152,5 +159,9 @@ body {
 
   .card__title {
     font-size: 2rem;
+  }
+
+  .attribution {
+    display: none;
   }
 }
