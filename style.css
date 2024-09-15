@@ -27,6 +27,7 @@
   --clr-white: 0, 0%, 100%;
   --clr-black: 0, 0%, 0%;
 
+  --spacing-250: 2.4rem;
   --spacing-200: 1.6rem;
   --spacing-150: 1.2rem;
   --spacing-100: 0.8rem;
@@ -94,12 +95,12 @@ body {
 .blog-card {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-200);
+  gap: var(--spacing-250);
   box-shadow: 8px 8px 0 0 hsl(var(--clr-black));
   border: 1px solid hsl(var(--clr-gray-950));
   border-radius: 2rem;
   background-color: hsl(var(--clr-white));
-  padding: var(--spacing-200);
+  padding: var(--spacing-250);
   width: 100%;
   max-width: 384px;
   font-weight: 500;
