@@ -1,20 +1,20 @@
 @font-face {
-  src: url("/assets/fonts/Figtree-VariableFont_wght.ttf");
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf");
   font-family: "Figtree";
 }
 
 @font-face {
-  src: url("/assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+  src: url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
   font-family: "Figtree Italic";
 }
 
 @font-face {
-  src: url("/assets/fonts/static/Figtree-SemiBold.ttf");
+  src: url("./assets/fonts/static/Figtree-SemiBold.ttf");
   font-family: "Figtree SemiBold";
 }
 
 @font-face {
-  src: url("/assets/fonts/static/Figtree-ExtraBold.ttf");
+  src: url("./assets/fonts/static/Figtree-ExtraBold.ttf");
   font-family: "Figtree ExtraBold";
 }
 
