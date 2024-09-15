@@ -1,0 +1,223 @@
+@font-face {
+  src: url("/assets/fonts/Figtree-VariableFont_wght.ttf");
+  font-family: "Figtree";
+}
+
+@font-face {
+  src: url("/assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+  font-family: "Figtree Italic";
+}
+
+@font-face {
+  src: url("/assets/fonts/static/Figtree-SemiBold.ttf");
+  font-family: "Figtree SemiBold";
+}
+
+@font-face {
+  src: url("/assets/fonts/static/Figtree-ExtraBold.ttf");
+  font-family: "Figtree ExtraBold";
+}
+
+/* VARIABLES */
+
+:root {
+  --clr-yellow: 47, 88%, 63%;
+  --clr-gray-950: 0, 0%, 7%;
+  --clr-gray-500: 0, 0%, 42%;
+  --clr-white: 0, 0%, 100%;
+  --clr-black: 0, 0%, 0%;
+
+  --spacing-200: 1.6rem;
+  --spacing-150: 1.2rem;
+  --spacing-100: 0.8rem;
+  --spacing-50: 0.4rem;
+
+  --ff-normal: "Figtree", sans-serif;
+  --ff-italic: "Figtree Italic", sans-serif;
+  --ff-semibold: "Figtree SemiBold", sans-serif;
+  --ff-extrabold: "Figtree ExtraBold", sans-serif;
+
+  --f1-size: 2.4rem;
+  --f1-height: 1.5;
+
+  --f2-size: 1.6rem;
+  --f2-height: 1.5;
+
+  --f3-size: 1.4rem;
+  --f3-height: 1.5;
+}
+
+/* RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* GENERAL */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--clr-yellow));
+  padding: var(--spacing-200);
+  min-height: 100vh;
+  font-family: var(--ff-normal);
+}
+
+/* UTILITY */
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  position: absolute !important;
+  clip-path: inset(50%) !important; /* 2 */
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important; /* 3 */
+}
+
+/* BLOG CARD */
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+  box-shadow: 8px 8px 0 0 hsl(var(--clr-black));
+  border: 1px solid hsl(var(--clr-gray-950));
+  border-radius: 2rem;
+  background-color: hsl(var(--clr-white));
+  padding: var(--spacing-200);
+  width: 100%;
+  max-width: 384px;
+  font-weight: 500;
+}
+
+.blog-card__image {
+  border-radius: 1rem;
+  width: 100%;
+  height: auto;
+}
+
+.blog-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-150);
+}
+
+.blog-card__badges {
+  display: flex;
+  gap: var(--spacing-150);
+  list-style-type: none;
+}
+
+.blog-card__badge {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 0.4rem;
+  background-color: hsl(var(--clr-yellow));
+  padding: var(--spacing-50) var(--spacing-150);
+  color: hsl(var(--clr-gray-950));
+  font-size: var(--f3-size);
+  line-height: var(--f3-height);
+  font-family: var(--ff-extrabold);
+  text-decoration: none;
+}
+
+.blog-card__badge:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card__info {
+  font-size: var(--f3-size);
+  line-height: var(--f3-height);
+}
+
+.blog-card__title {
+  transition: color 0.3s ease-in-out;
+  font-size: var(--f1-size);
+  line-height: var(--f1-height);
+  font-family: var(--ff-extrabold);
+}
+
+.blog-card__title:hover {
+  cursor: pointer;
+  color: hsl(var(--clr-yellow));
+}
+
+.blog-card__text {
+  color: hsl(var(--clr-gray-500));
+  font-size: var(--f2-size);
+  line-height: var(--f2-height);
+}
+
+.blog-card__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-150);
+}
+
+.blog-card__avatar {
+  border-radius: 50%;
+}
+
+.blog-card__author {
+  transition: color 0.3s ease-in-out;
+  font-size: var(--f3-size);
+  line-height: var(--f3-height);
+  font-family: var(--ff-extrabold);
+}
+
+.blog-card__author:hover {
+  cursor: pointer;
+  color: hsl(var(--clr-yellow));
+}
+
+/* ATTRIBUTION */
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 1rem 0 0;
+  background-color: hsl(var(--clr-white));
+  padding: var(--spacing-150);
+  font-weight: 500;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution__link {
+  color: hsl(var(--clr-gray-950));
+  font-family: var(--ff-extrabold);
+  text-decoration: none;
+}
+
+.attribution__link:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 999px) {
+  .attribution {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  :root {
+    --f1-size: 2rem;
+    --f2-size: 1.4rem;
+    --f3-size: 1.2rem;
+  }
+}

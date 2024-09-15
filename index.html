@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Blog preview card</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <h1 class="sr-only">Frontend Mentor | Blog preview card</h1>
+      <article class="blog-card">
+        <img
+          class="blog-card__image"
+          src="./assets/images/illustration-article.svg"
+          width="336"
+          height="200"
+          alt="An illustration related to the article on HTML and CSS foundations"
+        />
+        <div class="blog-card__content">
+          <ul class="blog-card__badges" aria-label="Article categories">
+            <li>
+              <a
+                class="blog-card__badge"
+                href="#"
+                aria-label="Learning related articles"
+                >Learning</a
+              >
+            </li>
+            <li>
+              <a
+                class="blog-card__badge"
+                href="#"
+                aria-label="HTML related articles"
+                >HTML</a
+              >
+            </li>
+            <li>
+              <a
+                class="blog-card__badge"
+                href="#"
+                aria-label="CSS related articles"
+                >CSS</a
+              >
+            </li>
+          </ul>
+          <small class="blog-card__info" aria-live="polite">
+            Published 21 Dec 2023</small
+          >
+          <h2 class="blog-card__title">HTML & CSS foundations</h2>
+          <p class="blog-card__text">
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </p>
+        </div>
+        <footer
+          class="blog-card__footer"
+          aria-label="Article footer with author details"
+        >
+          <img
+            class="blog-card__avatar"
+            src="./assets/images/image-avatar.webp"
+            alt="Avatar of author Greg Hooper"
+            width="32"
+            height="32"
+          />
+          <span class="blog-card__author">Greg Hooper</span>
+        </footer>
+      </article>
+    </main>
+
+    <div class="attribution">
+      <p>
+        Challenge by
+        <a
+          class="attribution__link"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          title="Visit Frontend Mentor website"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          class="attribution__link"
+          href="https://rubendeman.nl"
+          target="_blank"
+          title="Visit Ruben de Man's website"
+          >Ruben de Man</a
+        >.
+      </p>
+    </div>
+  </body>
+</html>
