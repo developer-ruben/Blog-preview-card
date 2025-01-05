@@ -163,6 +163,8 @@ p {
 
 .card__date {
   color: hsl(var(--clr-gray-950));
+  font-size: var(--text-preset-3-size);
+  line-height: var(--text-preset-3-height);
 }
 
 .card__title {
